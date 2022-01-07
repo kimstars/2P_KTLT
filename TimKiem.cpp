@@ -1,4 +1,5 @@
 #include "SapXep.cpp"
+#include "Tree.h"
 #include <vector>
 
 int SIZE_BANG[7] = {0, 6, 22, 40, 74, 92, 104};
@@ -9,11 +10,13 @@ struct Node
 	Node *next;
 };
 
-struct TreeNode
+TreeNode *newTreeNode(SinhVien sv)
 {
-	SinhVien data;
-	TreeNode *left, *right;
-};
+	TreeNode *temp = new TreeNode;
+	temp->data = sv;
+	temp->left = temp->right = NULL;
+	return temp;
+}
 
 //===================================================
 
@@ -37,8 +40,6 @@ Node *newNode(SinhVien sv);
 TreeNode *newTreeNode(SinhVien sv);
 void add(SinhVien sv, Node *t);
 TreeNode *Insert(TreeNode *t, SinhVien data, int type);
-int Search(SinhVien sv, string s, int type);
-SinhVien SearchTree(TreeNode *root, TreeNode *dsNP, string s, int type);
 
 //=================TIM KIEM TUAN TU==================
 
@@ -101,65 +102,57 @@ void timKiemNP(vector<SinhVien> ds, int n, int type)
 	{
 		cin >> keyword;
 	}
-	cout << keyword;
-	//Cần xử lý keyword tìm kiếm với ngày sinh
-	//Cách xử lý của tao là tạo một đối tượng mới chỉ 
-	//có thuộc tính cần so sánh
-	//rồi so sánh để tìm đối tượng đó
+	// cout << keyword;
+	// Cần xử lý keyword tìm kiếm với ngày sinh
+	// Cách xử lý của tao là tạo một đối tượng mới chỉ
+	// có thuộc tính cần so sánh
+	// rồi so sánh để tìm đối tượng đó
 
 	TreeNode *svtemp;
-	switch(type){
-		case 0: {
-			SinhVien a(keyword,"","","",0);
-			svtemp = newTreeNode(a);
-			break;
-		}
-		case 1:{ 
-			SinhVien a("",keyword,"","",0);
-			svtemp = newTreeNode(a);
-			break;
-		}
-		case 2:{ //tim theo ten
-			SinhVien a("","",keyword,"",0);
-			svtemp = newTreeNode(a);
-			break;
-		}
-		case 3:{ // tim theo ngay sinh (xu ly ngay sinh)
-			SinhVien a("","","",keyword,0);
-			svtemp = newTreeNode(a);
-			break;
-		}
-		case 4 :{ // tim theo diemtb (can xu ly tiep)
-			SinhVien a(keyword,"","","",0);
-			svtemp = newTreeNode(a);
-			break;
-		}
-		default:
-			break;
+	switch (type)
+	{
+	case 0:
+	{
+		SinhVien a(keyword, "", "", "", 0);
+		svtemp = newTreeNode(a);
+		break;
+	}
+	case 1:
+	{
+		SinhVien a("", keyword, "", "", 0);
+		svtemp = newTreeNode(a);
+		break;
+	}
+	case 2:
+	{ // tim theo ten
+		SinhVien a("", "", keyword, "", 0);
+		svtemp = newTreeNode(a);
+		break;
+	}
+	case 3:
+	{ // tim theo ngay sinh (xu ly ngay sinh)
+		SinhVien a("", "", "", keyword, 0);
+		svtemp = newTreeNode(a);
+		break;
+	}
+	case 4:
+	{ // tim theo diemtb (can xu ly tiep)
+		SinhVien a(keyword, "", "", "", 0);
+		svtemp = newTreeNode(a);
+		break;
+	}
+	default:
+		break;
 	}
 
-	ds = sapXepNhanh(ds, type, 0, n);
-	int count = 0;
-	TreeNode *root;
-	TreeNode *temp = root;
-	for(int i = 0; i < ds.size(); i++){
-		temp = Insert(temp,ds[i],type);
-	}
+	BSTtree T;
+	T.readTREE(ds);
 
 	SinhVien k;
-	k = SearchTree(root, svtemp, keyword, type);
+	k = T.SearchTree(T.root, svtemp, keyword, type);
 	// root : tree ban đầu , svtemp là đối tượng chứa thuộc tính cần so sánh, s : key word
 
 	cout << k;
-
-	if (count == 0)
-	{
-		// khongTimThay();
-	}
-	else
-	{
-		// printSearch(dsNP, count, type, s);
-	}
 }
 
 //====================CAC HAM HO TRO TIM KIEM===============
@@ -344,159 +337,4 @@ string low2(string x)
 			x[i] = x[i] + 32;
 	}
 	return x;
-}
-
-//------------------SU DUNG STRUCT TIM KIEM NHI PHAN--------------------
-
-Node *newNode(SinhVien sv)
-{
-	Node *temp = new Node();
-	temp->data = sv;
-	temp->next = NULL;
-	return temp;
-}
-
-TreeNode *newTreeNode(SinhVien sv)
-{
-	TreeNode *temp = new TreeNode();
-	temp->data = sv;
-	temp->left = temp->right = NULL;
-	return temp;
-}
-
-// them sv vao list node t
-void add(SinhVien sv, Node *t)
-{
-	Node *p = new Node;
-	p->data = sv;
-	p->next = NULL;
-	if (t == NULL)
-	{
-		t = p;
-	}
-	else
-	{
-		t->next = p;
-	}
-}
-
-// them data vao cay
-//  nho hon them vao trai
-//  lon hon hoac bang them vao phai
-TreeNode *Insert(TreeNode *t, SinhVien data, int type)
-{
-
-	if (t == NULL)
-		return newTreeNode(data); // neu tree rong ra ve node moi
-
-	if (soSanh(t->data, data, type) == -1)
-		t->left = Insert(t->left, data, type);
-	else
-	{
-		t->right = Insert(t->right, data, type);
-	}
-	return t;
-}
-
-int Search(SinhVien sv, string s, int type)
-{
-	int check = checkSinhVien(sv, type, s);
-	switch (type)
-	{
-	case 0:
-	{
-		// ma lop
-		if (check == 1)
-		{
-			return 10;
-		}
-		low(sv.maLop);
-		return soSanhChuoi(sv.maLop, s);
-		break;
-	}
-	case 1:
-	{
-		// ma sinh vien
-		if (check == 1)
-		{
-			return 10;
-		}
-		low(sv.maSV);
-		return soSanhChuoi(sv.maSV, s);
-		break;
-	}
-	case 2:
-	{
-		// hoten
-		if (check == 1)
-		{
-			return 10;
-		}
-		low(sv.hoTen);
-		return soSanhTen(sv.hoTen, s);
-		break;
-	}
-	case 3:
-	{
-		// ngay sinh
-		if (check == 1)
-		{
-			return 10;
-		}
-		return soSanhNgaySinh(sv.ngaySinh, s);
-		break;
-	}
-	case 4:
-	{
-		if (check == 1)
-		{
-			return 10;
-		}
-		return soSanhChuoi(floatToString(sv.diemTB), s);
-		break;
-	}
-	}
-}
-
-
-int LeftOf(TreeNode *value, TreeNode *root, int type)
-{
-	return soSanh(root->data, value->data,type) == -1;
-}
-
-int RightOf(TreeNode *value, TreeNode *root, int type)
-{
-	return soSanh(root->data, value->data,type) != -1;
-}
-
-// search cay nhi phan tim kiem
-SinhVien SearchTree(TreeNode *root,TreeNode *value,  string s, int type)
-{
-	if (root == NULL)
-		return root->data;
-	// Node *temp = newNode(root->data);
-	// int ss = Search(temp->data, s, type);
-	// if (ss == 10)
-	// {
-	// 	add(root->data,dsNP);
-	// 	++count;
-	// }
-	// if (ss == -1){
-	// 	return SearchTree(root->left,dsNP, s, type, count);
-	// }else if (ss == 1){
-	// 	return SearchTree(root->right,dsNP,s, type, count);
-	// }
-
-	if (soSanh(root->data, value->data,type) == 0)
-	{
-		return root->data;
-	}
-	else if (LeftOf(value, root, type))
-	{
-		return SearchTree(root->left, value ,s, type);
-	}
-	else if (RightOf(value, root, type))
-	{
-		return SearchTree(root->right, value , s,type);
-	}
 }

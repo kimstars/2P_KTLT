@@ -248,6 +248,7 @@ int soSanhNgaySinh(string x, string y){
 
 int soSanh(SinhVien x ,SinhVien y,int type){
 	int key;
+	// cout << "kietcheck";
 	switch (type)
 	{
 		case 0: key = soSanhChuoi(x.maLop,y.maLop); break;
@@ -256,6 +257,7 @@ int soSanh(SinhVien x ,SinhVien y,int type){
 		case 3: key = soSanhNgaySinh(x.ngaySinh,y.ngaySinh); break;
 		case 4: key = soSanhChuoi(floatToString(x.diemTB),floatToString(y.diemTB)); break;
 	}
+	// cout << key;
 	return key;
 }
 

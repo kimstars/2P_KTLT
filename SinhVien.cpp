@@ -21,7 +21,8 @@ class SinhVien{
         string ngaySinh;
         float diemTB;
         SinhVien();
-        SinhVien(string, string , string , string , float);
+        ~SinhVien(){};
+        SinhVien(string maLop, string maSV, string hoTen, string ngaySinh, float diemTB):maLop(maLop),maSV(maSV),hoTen(hoTen),ngaySinh(ngaySinh),diemTB(diemTB){};
         
         void Input(int ,int); //x,y
         void Output(int ,int ,int); //x,y,i
@@ -36,21 +37,21 @@ class SinhVien{
 
 
 SinhVien::SinhVien(){
-    this->maLop = "0";
-    this->maSV = "0";
-    this->hoTen = "Khong";
+    this->maLop = "";
+    this->maSV = "";
+    this->hoTen = "";
     this->ngaySinh = "00/00/0000";
     this->diemTB = 0.0;
 }
 
 
-SinhVien::SinhVien(string maLop, string maSV, string hoTen, string ngaySinh, float diemTB){
-    this->maLop = maLop;
-    this->maSV = maSV;
-    this->hoTen = hoTen;
-    this->ngaySinh = ngaySinh;
-    this->diemTB = diemTB;
-}
+// SinhVien::SinhVien(string maLop, string maSV, string hoTen, string ngaySinh, float diemTB){
+//     this->maLop = maLop;
+//     this->maSV = maSV;
+//     this->hoTen = hoTen;
+//     this->ngaySinh = ngaySinh;
+//     this->diemTB = diemTB;
+// }
 
 
 void SinhVien::Input(int x,int y){

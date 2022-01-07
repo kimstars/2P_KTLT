@@ -9,6 +9,10 @@
         "xmemory": "cpp",
         "xtr1common": "cpp",
         "xutility": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "system_error": "cpp",
+        "xlocmon": "cpp",
+        "xlocnum": "cpp",
+        "sapxep.cpp": "c"
     }
 }
