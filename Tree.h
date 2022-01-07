@@ -47,8 +47,9 @@ public:
     TreeNode *Insert(TreeNode *t, SinhVien data, int type)
     {
         TreeNode *tempTreeNode = newTreeNode(data);
-        if (t == NULL)
+        if (t == NULL){
             return tempTreeNode; // neu tree rong ra ve node moi
+        }
 
         if (LeftOf(t, tempTreeNode, type))
         {
@@ -61,10 +62,20 @@ public:
         return t;
     }
 
+    void PreOrder(TreeNode *root)
+    {
+        if (root != NULL)
+        {
+            cout << (root->data);
+            PreOrder(root->left);
+            PreOrder(root->right);
+        }
+    }
+
     // search cay nhi phan tim kiem
     SinhVien SearchTree(TreeNode *root, TreeNode *value, string s, int type)
     {
-        cout << root->data;
+        // cout << root->data;
         if (root == NULL)
         {
 
@@ -87,13 +98,11 @@ public:
 
     void readTREE(vector<SinhVien> ds)
     {
-        TreeNode *temp = root;
         vector<SinhVien> ds2;
         for (int i = 0; i < ds.size(); i++)
         {
-            // cout <<"kiet check";
             cout << i;
-            temp = Insert(temp, ds[i], type);
+            root = Insert(root, ds[i], type);
         }
     }
 };

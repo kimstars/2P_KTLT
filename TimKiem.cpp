@@ -147,7 +147,7 @@ void timKiemNP(vector<SinhVien> ds, int n, int type)
 
 	BSTtree T;
 	T.readTREE(ds);
-
+	// T.PreOrder(T.root);
 	SinhVien k;
 	k = T.SearchTree(T.root, svtemp, keyword, type);
 	// root : tree ban đầu , svtemp là đối tượng chứa thuộc tính cần so sánh, s : key word
