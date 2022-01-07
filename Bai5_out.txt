@@ -1,0 +1,201 @@
+			DANH SACH SINH VIEN
+
+1> 
+Ma lop: CNTT1
+Ma sinh vien: 01055001
+Ho va ten: Tran Thai Ha
+Ngay sinh: 26/09/2001
+Diem trung binh tich luy: 4.63
+
+
+2> 
+Ma lop: CNTT1
+Ma sinh vien: 01055002
+Ho va ten: Truong Thi La
+Ngay sinh: 03/11/2001
+Diem trung binh tich luy: 8.71
+
+
+3> 
+Ma lop: CNTT1
+Ma sinh vien: 01055017
+Ho va ten: Nguyen Thi Tra
+Ngay sinh: 30/09/2001
+Diem trung binh tich luy: 7.32
+
+
+4> 
+Ma lop: CNTT1
+Ma sinh vien: 01055010
+Ho va ten: Nguyen Quoc Thinh
+Ngay sinh: 07/12/2001
+Diem trung binh tich luy: 3.85
+
+
+5> 
+Ma lop: CNTT1
+Ma sinh vien: 01055004
+Ho va ten: Nguyen Duc Anh
+Ngay sinh: 11/01/2001
+Diem trung binh tich luy: 6.54
+
+
+6> 
+Ma lop: CNTT2
+Ma sinh vien: 01055027
+Ho va ten: Nguyen Manh Hung
+Ngay sinh: 06/09/2001
+Diem trung binh tich luy: 7.82
+
+
+7> 
+Ma lop: CNTT2
+Ma sinh vien: 01055035
+Ho va ten: Nguyen Phi Luan
+Ngay sinh: 22/11/2001
+Diem trung binh tich luy: 6.16
+
+
+8> 
+Ma lop: CNTT2
+Ma sinh vien: 01055037
+Ho va ten: Le Thi Phuong Phuong
+Ngay sinh: 21/04/2001
+Diem trung binh tich luy: 8.44
+
+
+9> 
+Ma lop: CNTT2
+Ma sinh vien: 01055038
+Ho va ten: Trinh Thi Thanh
+Ngay sinh: 08/08/2001
+Diem trung binh tich luy: 8.54
+
+
+10> 
+Ma lop: CNTT2
+Ma sinh vien: 01055041
+Ho va ten: Tran Thi Toi
+Ngay sinh: 01/10/2001
+Diem trung binh tich luy: 9.12
+
+
+11> 
+Ma lop: BDATTT
+Ma sinh vien: 01055053
+Ho va ten: An Thanh Tu
+Ngay sinh: 05/07/2001
+Diem trung binh tich luy: 6.05
+
+
+12> 
+Ma lop: BDATTT
+Ma sinh vien: 01055048
+Ho va ten: Khong Phuong Thao
+Ngay sinh: 12/06/2001
+Diem trung binh tich luy: 8.67
+
+
+13> 
+Ma lop: BDATTT
+Ma sinh vien: 01055056
+Ho va ten: Hoang Linh Phuong
+Ngay sinh: 16/12/2001
+Diem trung binh tich luy: 8.19
+
+
+14> 
+Ma lop: BDATTT
+Ma sinh vien: 01055050
+Ho va ten: Hoang Thanh Hung
+Ngay sinh: 18/02/2001
+Diem trung binh tich luy: 4.75
+
+
+15> 
+Ma lop: BDATTT
+Ma sinh vien: 01055061
+Ho va ten: Tran Bao Trung
+Ngay sinh: 08/11/2000
+Diem trung binh tich luy: 7.18
+
+
+16> 
+Ma lop: ANHTTT
+Ma sinh vien: 01055083
+Ho va ten: Nong Phuong Trang
+Ngay sinh: 02/06/2001
+Diem trung binh tich luy: 7.91
+
+
+17> 
+Ma lop: ANHTTT
+Ma sinh vien: 01055074
+Ho va ten: Dinh Thi Ngoc Hoa
+Ngay sinh: 23/11/2001
+Diem trung binh tich luy: 8.06
+
+
+18> 
+Ma lop: ANHTTT
+Ma sinh vien: 01055070
+Ho va ten: Do Quang Hanh
+Ngay sinh: 25/07/2001
+Diem trung binh tich luy: 6.43
+
+
+19> 
+Ma lop: ANHTTT
+Ma sinh vien: 01055077
+Ho va ten: Chu Tuan Kiet
+Ngay sinh: 02/01/2001
+Diem trung binh tich luy: 7.33
+
+
+20> 
+Ma lop: ANHTTT
+Ma sinh vien: 01055078
+Ho va ten: Nguyen Van Cong
+Ngay sinh: 11/11/2001
+Diem trung binh tich luy: 7.01
+
+
+21> 
+Ma lop: PTDL
+Ma sinh vien: 01055090
+Ho va ten: Dang Huu Trang
+Ngay sinh: 05/02/2001
+Diem trung binh tich luy: 5.75
+
+
+22> 
+Ma lop: PTDL
+Ma sinh vien: 01055087
+Ho va ten: Hoang Thi Xuan Quynh
+Ngay sinh: 13/07/2001
+Diem trung binh tich luy: 8.69
+
+
+23> 
+Ma lop: PTDL
+Ma sinh vien: 01055092
+Ho va ten: Do Le Huy
+Ngay sinh: 15/08/2001
+Diem trung binh tich luy: 6.32
+
+
+24> 
+Ma lop: PTDL
+Ma sinh vien: 01055088
+Ho va ten: Nguyen Thanh Long
+Ngay sinh: 25/05/2001
+Diem trung binh tich luy: 7.03
+
+
+25> 
+Ma lop: PTDL
+Ma sinh vien: 01055086
+Ho va ten: Ngo Thi Minh Thu
+Ngay sinh: 01/06/2000
+Diem trung binh tich luy: 8.69
+
